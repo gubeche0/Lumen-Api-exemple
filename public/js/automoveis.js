@@ -142,6 +142,7 @@ function saveForm(){
         type: method,
         data: $('form').serialize(),
         success: function(data) {
+            console.log(data);
             updateAutomoveis();
             cancelarForm();
         }

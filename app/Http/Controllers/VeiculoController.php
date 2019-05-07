@@ -15,7 +15,6 @@ class VeiculoController extends Controller
 
     public function store(Request $request)
     {
-        return json_encode($request->all());
         $veiculo = new Veiculo($request->all());
         $veiculo->save();
         return response()->json($veiculo);

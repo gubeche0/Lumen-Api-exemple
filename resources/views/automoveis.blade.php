@@ -103,7 +103,7 @@
             <div class="form-group row">
                 <label for="email" class="col-sm-2 col-form-label">Proprietário:</label>
                 <div class="col-sm-10">
-                    <select class="form-control" name="propietario_id" id="propietario">
+                    <select class="form-control" name="proprietario_id" id="propietario">
                       </select>
                 </div>
             </div>
