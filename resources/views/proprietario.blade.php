@@ -46,7 +46,7 @@
         </div>
     </nav>
 
-    <div class="container" id="form" style="display: block">
+    <div class="container" id="form" style="display: none">
 
 		<div class="panel-heading">
 			<h1 class="panel-title text-center my-3">Cadastrar Proprietário</h1>
@@ -127,54 +127,13 @@
                     </thead>
                     <tbody>
 
-                        <tr>
-                            <td>12345678</td>
-                            <td>Química 2</td>
-                            <td>valume 3 </td>
-                            <td>Pedro</td>
-                            <td>
-                                <!-- <a class="text-dark" href='#'><i class="fas fa-info" aria-hidden="true"></i> Info</a> | -->
-                                <a class="text-dark" href='/livros/12345678/edit'><i class="fas fa-edit"
-                                        aria-hidden="true"></i> Editar</a> |
-                                <a class="text-dark" href="#" onclick="excluir('12345678')"><i class="fas fa-trash"
-                                        aria-hidden="true"></i> Excluir</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>234324324789</td>
-                            <td>Química</td>
-                            <td>Volume 2</td>
-                            <td>Martha Reis</td>
-                            <td>
-                                <!-- <a class="text-dark" href='#'><i class="fas fa-info" aria-hidden="true"></i> Info</a> | -->
-                                <a class="text-dark" href='/livros/234324324789/edit'><i class="fas fa-edit"
-                                        aria-hidden="true"></i> Editar</a> |
-                                <a class="text-dark" href="#" onclick="excluir('234324324789')"><i class="fas fa-trash"
-                                        aria-hidden="true"></i> Excluir</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>978-85-96-00358-2</td>
-                            <td>Geografia em rede</td>
-                            <td>Volume 2</td>
-                            <td>Edilson Adão</td>
-                            <td>
-                                <!-- <a class="text-dark" href='#'><i class="fas fa-info" aria-hidden="true"></i> Info</a> | -->
-                                <a class="text-dark" href='/livros/978-85-96-00358-2/edit'><i class="fas fa-edit"
-                                        aria-hidden="true"></i> Editar</a> |
-                                <a class="text-dark" href="#" onclick="excluir('978-85-96-00358-2')"><i
-                                        class="fas fa-trash" aria-hidden="true"></i> Excluir</a></td>
-                        </tr>
-
                     </tbody>
                 </table>
 
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -182,14 +141,7 @@
         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
-    <script src="/js/js.js"></script>
+    <script src="/js/proprietarios.js"></script>
     <script>
         $("#query").quicksearch('table tbody tr')
-        function excluir(id) {
-            var resposta = confirm("Deseja deletar a categoria???");
-
-            if (resposta == true) {
-                window.location.href = '/livros/' + id + '/delete';
-            }
-        }
     </script>

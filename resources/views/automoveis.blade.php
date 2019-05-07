@@ -204,7 +204,7 @@
         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
-    <script src="/js/js.js"></script>
+    <script src="/js/automoveis.js"></script>
     <script>
         $("#query").quicksearch('table tbody tr')
         function excluir(id) {
