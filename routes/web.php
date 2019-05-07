@@ -13,7 +13,16 @@
 
 $router->get('/', function () use ($router) {
     // return $router->app->version();
-    return view('index');
+    // return view('index');
+    return redirect('/proprietarios');
+});
+
+$router->get('/proprietarios', function(){
+    return view('proprietario');
+});
+
+$router->get('/automoveis', function(){
+    return view('automoveis');
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
