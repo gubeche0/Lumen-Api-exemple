@@ -15,3 +15,18 @@ $router->get('/', function () use ($router) {
     // return $router->app->version();
     return view('index');
 });
+
+
+
+$router->get('/proprietario', 'ProprietarioController@list');
+$router->get('/proprietario/{id}', 'ProprietarioController@show');
+$router->post('/proprietario', 'ProprietarioController@store');
+$router->put('/proprietario/{id}', 'ProprietarioController@update');
+$router->delete('/proprietario/{id}', 'ProprietarioController@destroy');
+
+
+$router->get('/automoveis', 'VeiculoController@list');
+$router->get('/automovel/{id}', 'VeiculoController@show');
+$router->post('/automovel', 'VeiculoController@store');
+$router->put('/automovel/{id}', 'VeiculoController@update');
+$router->delete('/automovel/{id}', 'VeiculoController@destroy');
