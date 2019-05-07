@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function () use ($router) {
     
-    $router->get('/proprietario', 'ProprietarioController@list');
+    $router->get('/proprietarios', 'ProprietarioController@list');
     $router->get('/proprietario/{id}', 'ProprietarioController@show');
     $router->post('/proprietario', 'ProprietarioController@store');
     $router->put('/proprietario/{id}', 'ProprietarioController@update');

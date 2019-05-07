@@ -11,7 +11,7 @@
 <body>
 
 
-	<div class="container>
+	<div class="container">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h1 class="panel-title text-center my-3">Veículos e Proprietários</h1>
@@ -37,7 +37,7 @@
 								<th>Placa</th>
 								<th>Descrição</th>
 								<th>Cor</th>
-								<th>Kilometragem</th>
+								<th>KM</th>
 								<th>Ano</th>
 								<th>Proprietário</th>
 								<th>Excluir</th>
@@ -47,13 +47,13 @@
 						<tbody>
 
 							<tr>
-								<td>{$value[""]}</td>
-								<td>{$value[""]}</td>
-								<td>{$value[""]}</td>
-								<td>{$value[""]}</td>
-								<td>{$value[""]}</td>
-								<td>{$value[""]}</td>
-								<td>{$value[""]} |<a class="text-primary" href="#" ></i> Detalhes</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td> |<a class="text-primary" href="#" ></i> Detalhes</a></td>
 								<td><a class="text-primary" href="#" onclick="excluir({$value['matricula']})"><i class="fas fa-trash" aria-hidden="true"></i> Excluir</a></td></td>
 							</tr>
 
@@ -210,7 +210,7 @@
 
 
 
-	<div class="container>
+	<div class="container">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h1 class="panel-title text-center my-3">Detalhes Proprietários</h1>
