@@ -50,6 +50,7 @@ function montarTabelaProprietarios(dados){
 
         tabela.append(tr);
     });
+    $("#query").quicksearch('table tbody tr')
 }
 
 

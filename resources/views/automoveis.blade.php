@@ -46,7 +46,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" id="form" style="display: none">
 
         <div class="panel-heading">
             <h1 class="panel-title text-center my-3">Cadastrar Veículos</h1>
@@ -60,9 +60,9 @@
             
         </div>
 
-        <form method="post" id="form">
+        <form id="form">
 
-
+            <input type="hidden" name="id" id="id" value="">
             <div class="form-group row">
 
                 <label for="nome" class="col-sm-2 col-form-label">Placa:</label>
@@ -103,10 +103,7 @@
             <div class="form-group row">
                 <label for="email" class="col-sm-2 col-form-label">Proprietário:</label>
                 <div class="col-sm-10">
-                    <select class="form-control" name="propietario_id" id="propietario"">
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                    <select class="form-control" name="propietario_id" id="propietario">
                       </select>
                 </div>
             </div>
@@ -115,8 +112,8 @@
 
 
             <div class="form-group row">
-                <input name="salvar" id="salvar" class="btn btn-primary col" type="submit" value="Salvar">
-                <input name="cancelar" id="cancelar" class="btn btn-danger col ml-1" type="reset" value="Cancelar">
+                <input name="salvar" id="salvar" class="btn btn-primary col" type="button" value="Salvar">
+                <input name="cancelar" id="cancelar" class="btn btn-danger col ml-1" type="button" value="Cancelar">
             </div>
         </form>
     </div>
@@ -136,57 +133,20 @@
                     </div>
                 </div>
 
-                <a href="" id="btnNew">Novo Veículos</a>
+                <a href="#" onclick="editar()" id="btnNew">Novo Veículos</a>
                 <table class="table table-striped table-bordered table-hover">
                     <thead class="thead-light">
                         <tr>
                             <th>ID</th>
-                            <th>Nome</th>
-                            <th>Sobrenome</th>
-                            <th>Telefone</th>
+                            <th>Placa</th>
+                            <th>Descrição</th>
+                            <th>Cor</th>
+                            <th>Km</th>
+                            <th>Ano</th>
                             <th>Ação</th>
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr>
-                            <td>12345678</td>
-                            <td>Química 2</td>
-                            <td>valume 3 </td>
-                            <td>Pedro</td>
-                            <td>
-                                <!-- <a class="text-dark" href='#'><i class="fas fa-info" aria-hidden="true"></i> Info</a> | -->
-                                <a class="text-dark" href='/livros/12345678/edit'><i class="fas fa-edit"
-                                        aria-hidden="true"></i> Editar</a> |
-                                <a class="text-dark" href="#" onclick="excluir('12345678')"><i class="fas fa-trash"
-                                        aria-hidden="true"></i> Excluir</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>234324324789</td>
-                            <td>Química</td>
-                            <td>Volume 2</td>
-                            <td>Martha Reis</td>
-                            <td>
-                                <!-- <a class="text-dark" href='#'><i class="fas fa-info" aria-hidden="true"></i> Info</a> | -->
-                                <a class="text-dark" href='/livros/234324324789/edit'><i class="fas fa-edit"
-                                        aria-hidden="true"></i> Editar</a> |
-                                <a class="text-dark" href="#" onclick="excluir('234324324789')"><i class="fas fa-trash"
-                                        aria-hidden="true"></i> Excluir</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>978-85-96-00358-2</td>
-                            <td>Geografia em rede</td>
-                            <td>Volume 2</td>
-                            <td>Edilson Adão</td>
-                            <td>
-                                <!-- <a class="text-dark" href='#'><i class="fas fa-info" aria-hidden="true"></i> Info</a> | -->
-                                <a class="text-dark" href='/livros/978-85-96-00358-2/edit'><i class="fas fa-edit"
-                                        aria-hidden="true"></i> Editar</a> |
-                                <a class="text-dark" href="#" onclick="excluir('978-85-96-00358-2')"><i
-                                        class="fas fa-trash" aria-hidden="true"></i> Excluir</a></td>
-                        </tr>
 
                     </tbody>
                 </table>
@@ -194,9 +154,7 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -205,13 +163,5 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
     <script src="/js/automoveis.js"></script>
-    <script>
-        $("#query").quicksearch('table tbody tr')
-        function excluir(id) {
-            var resposta = confirm("Deseja deletar a categoria???");
-
-            if (resposta == true) {
-                window.location.href = '/livros/' + id + '/delete';
-            }
-        }
-    </script>
+</body>
+</html>

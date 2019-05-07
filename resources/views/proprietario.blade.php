@@ -142,6 +142,5 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
     <script src="/js/proprietarios.js"></script>
-    <script>
-        $("#query").quicksearch('table tbody tr')
-    </script>
+</body>
+</html>
