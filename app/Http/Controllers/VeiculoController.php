@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Veiculo;
+use Illuminate\Http\Request;
 
 class VeiculoController extends Controller
 {
@@ -14,6 +15,7 @@ class VeiculoController extends Controller
 
     public function store(Request $request)
     {
+        return json_encode($request->all());
         $veiculo = new Veiculo($request->all());
         $veiculo->save();
         return response()->json($veiculo);

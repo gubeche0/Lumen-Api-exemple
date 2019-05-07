@@ -2,6 +2,12 @@
 
 $(function(){
     obterProprietarios();
+    $('#cancelar').click(function() {
+        cancelarForm();
+    })
+    $('#salvar').click(function() {
+        saveForm();
+    });
 });
 
 
@@ -59,4 +65,64 @@ function excluir(id) {
             }
         });
     }
+}
+
+function editar(id){
+    cleanForm();
+    $('#listagem').hide();
+    $('#form').show();
+
+    if(id != null){
+        $.ajax({
+            url: '/api/proprietario/' + id,
+            type: 'get',
+            success: function(data) {
+                console.log(data);
+                preencherForm(data);
+            }
+        });
+    }
+
+}
+
+function cleanForm(){
+    $('#id').val('');
+    $('#name').val('');
+    $('#lastname').val('');
+    $('#phone').val('');
+    $('#cnh').val('');
+}
+
+function cancelarForm(){
+    cleanForm();
+    $('#form').hide();
+    $('#listagem').show();
+}
+
+function preencherForm(data){
+    $('#id').val(data.id);
+    $('#name').val(data.name);
+    $('#lastname').val(data.lastName);
+    $('#phone').val(data.phone);
+    $('#cnh').val(data.cnh);
+}
+
+function saveForm(){
+    if($('#id').val() != ''){
+        var method = 'put';
+        var url = '/api/proprietario/' + $('#id').val();
+    }else{
+        var method = 'post';
+        var url = '/api/proprietario/';
+    }
+    
+    $.ajax({
+        url: url,
+        type: method,
+        data: $('form').serialize(),
+        success: function(data) {
+            updateProprietarios();
+            cancelarForm();
+        }
+    });
 }

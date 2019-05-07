@@ -60,41 +60,41 @@
 			
 		</div>
 
-		<form method="post" id="form">
+		<form>
 
 			<div class="form-group row">
-
+                <input type="hidden" name="id" id="id" value="">
 				<label for="nome" class="col-sm-2 col-form-label">Nome:</label>
 				<div class="col-sm-10">
 
-					<input type="text" name="name" id="nome" class="form-control" placeholder="Nome">
+					<input type="text" name="name" id="name" class="form-control" placeholder="Nome">
 				</div>
 			</div>
 
 			<div class="form-group row">
 				<label for="email" class="col-sm-2 col-form-label">Sobrenome:</label>
 				<div class="col-sm-10">
-					<input type="text" name="lastname" id="sobrenome" placeholder="Sobrenome" class="form-control">
+					<input type="text" name="lastname" id="lastname" placeholder="Sobrenome" class="form-control">
 				</div>
 			</div>
 
 			<div class="form-group row">
 				<label for="curso" class="col-sm-2 col-form-label">Telefone:</label>
 				<div class="col-sm-10">
-					<input type="number" name="phone" id="telefone" placeholder="Telefone" class="form-control">
+					<input type="text" name="phone" id="phone" placeholder="Telefone" class="form-control">
 				</div>
 			</div>
 
 			<div class="form-group row">
 				<label for="email" class="col-sm-2 col-form-label">CNH:</label>
 				<div class="col-sm-10">
-					<input type="number" name="cnh" id="cnh" placeholder="CNH" class="form-control">
+					<input type="text" name="cnh" id="cnh" placeholder="CNH" class="form-control">
 				</div>
 			</div>
 
 			<div class="form-group row">
-				<input name="salvar" id="salvar" class="btn btn-primary col" type="submit" value="Salvar">
-				<input name="cancelar" id="cancelar" class="btn btn-danger col ml-1" type="reset" value="Cancelar">
+				<input name="salvar" id="salvar" class="btn btn-primary col" type="button" value="Salvar">
+				<input name="cancelar" id="cancelar" class="btn btn-danger col ml-1" type="button" value="Cancelar">
 			</div>
 		</form>
     </div>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
 
-                <a href="" id="btnNew">Novo Proprietário</a>
+                <a onclick='editar()' href="#" id="btnNew">Novo Proprietário</a>
                 <table class="table table-striped table-bordered table-hover">
                     <thead class="thead-light">
                         <tr>
