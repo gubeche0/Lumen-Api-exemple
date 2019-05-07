@@ -24,7 +24,7 @@ $router->put('/proprietario/{id}', 'ProprietarioController@update');
 $router->delete('/proprietario/{id}', 'ProprietarioController@destroy');
 
 
-$router->get('/automoveis', 'VeiculoController@index');
+$router->get('/automoveis', 'VeiculoController@list');
 $router->get('/automovel/{id}', 'VeiculoController@show');
 $router->post('/automovel', 'VeiculoController@store');
 $router->put('/automovel/{id}', 'VeiculoController@update');
