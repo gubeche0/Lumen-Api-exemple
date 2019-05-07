@@ -17,7 +17,7 @@ class Proprietario extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('lastName');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('cnh');
             $table->timestamps();
         });

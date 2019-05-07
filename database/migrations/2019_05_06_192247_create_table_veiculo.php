@@ -15,11 +15,11 @@ class CreateTableVeiculo extends Migration
     {
         Schema::create('veiculos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('placa');
+            $table->string('placa')->unique();
             $table->string('descricao');
-            $table->string('cor');
-            $table->string('km');
-            $table->string('ano');
+            $table->string('cor')->nullable();
+            $table->string('km')->nullable();
+            $table->string('ano')->nullable();
             $table->bigInteger('proprietario_id')->unsigned();
             $table->foreign('proprietario_id')->references('id')->on('proprietarios');
             $table->timestamps();
